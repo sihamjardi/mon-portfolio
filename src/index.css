@@ -1,0 +1,432 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light dark;
+}
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: hsl(var(--primary) / 0.8);
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  display: block;
+  place-items: unset;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+      color: #213547;
+      background-color: #ffffff;
+    }
+  a:hover {
+      color: hsl(var(--primary) / 0.8);
+    }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 20 25% 95%;
+    --foreground: 24 10% 27%;
+    --card: var(--background);
+    --card-foreground: var(--foreground);
+    --popover: var(--background);
+    --popover-foreground: var(--foreground);
+    --primary: 346 83% 47%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 20 20% 90%;
+    --secondary-foreground: var(--foreground);
+    --muted: 20 8% 51%;
+    --muted-foreground: 20 8% 51%;
+    --accent: 20 20% 90%;
+    --accent-foreground: var(--foreground);
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 20 10% 82%;
+    --input: 20 10% 82%;
+    --ring: 24 10% 27%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 24 10% 15%;
+    --foreground: 20 25% 95%;
+    --card: var(--background);
+    --card-foreground: var(--foreground);
+    --popover: var(--background);
+    --popover-foreground: var(--foreground);
+    --primary: 346 83% 47%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 24 10% 25%;
+    --secondary-foreground: var(--foreground);
+    --muted: 20 8% 60%;
+    --muted-foreground: 20 8% 60%;
+    --accent: 24 10% 25%;
+    --accent-foreground: var(--foreground);
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 24 10% 35%;
+    --input: 24 10% 35%;
+    --ring: 20 25% 95%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/*project */
+.card {
+  position: relative;
+  background-color: hsl(var(--card));
+  aspect-ratio: 4/3;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 1000px;
+  box-shadow: 0 0 0 5px hsl(var(--background) / 0.5);
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+}
+
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px hsl(var(--foreground) / 0.15);
+}
+
+.card__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: hsl(var(--card));
+  transform: rotateX(-90deg);
+  transform-origin: bottom;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover .card__content {
+  transform: rotateX(0deg);
+}
+
+.card__title {
+  margin: 0;
+  font-size: 1.25rem;
+  color: hsl(var(--foreground));
+  font-weight: 700;
+}
+
+.card__description {
+  margin: 10px 0 10px;
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+  line-height: 1.4;
+}
+
+.card__button {
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius);
+  background: hsl(var(--primary));
+  border: none;
+  color: hsl(var(--primary-foreground));
+  transition: background 0.3s;
+}
+
+.secondary {
+  background: transparent;
+  color: hsl(var(--primary));
+  border: 1px solid hsl(var(--primary));
+}
+
+
+/* Certification */
+
+.card {
+  perspective: 1000px;
+}
+
+.card > div {
+  transform-style: preserve-3d;
+}
+
+.rotate-x-90 {
+  transform: rotateX(90deg);
+}
+.group-hover\:rotate-x-0 {
+  transform: rotateX(0deg);
+}
+
+
+
+/* Définition du style du bouton de base */
+.fancy-button {
+    display: inline-block;
+    /* Ajuster le padding pour qu'il soit moins haut que le modèle */
+    padding: 10px 20px;
+
+    /* Utiliser les variables CSS de Tailwind pour le bord, le texte et la couleur de survol */
+    border: 1px solid hsl(var(--foreground) / 0.5); /* Bord gris subtil */
+    border-radius: var(--radius); /* Utiliser le rayon de Tailwind */
+    transition: all 0.2s ease-in;
+    position: relative;
+    overflow: hidden;
+    font-size: 16px; /* Taille légèrement réduite pour les liens */
+    cursor: pointer;
+    color: hsl(var(--foreground)); /* Couleur du texte par défaut */
+    z-index: 1;
+    font-weight: 600; /* Rendre le texte gras */
+}
+
+/* Pseudo-élément :before (Effet d'ondulation interne sombre) */
+.fancy-button:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.25);
+    top: 100%;
+    width: 140%;
+    height: 180%;
+    background-color: hsl(var(--foreground) / 0.05); /* Utiliser le foreground avec opacité */
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+}
+
+/* Pseudo-élément :after (Effet d'ondulation primaire/rouge) */
+.fancy-button:after {
+    content: "";
+    position: absolute;
+    left: 55%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.45);
+    top: 180%;
+    width: 160%;
+    height: 190%;
+    background-color: hsl(var(--primary)); /* Utiliser votre couleur PRIMARY (Rouge) */
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+}
+
+/* État de survol */
+.fancy-button:hover {
+    color: hsl(var(--primary-foreground)); /* Changer la couleur du texte en blanc */
+    border: 1px solid hsl(var(--primary)); /* Changer la couleur du bord en rouge */
+}
+
+/* Effets des pseudo-éléments au survol */
+.fancy-button:hover:before {
+    top: -35%;
+    background-color: hsl(var(--primary)); /* Remplir avec la couleur primaire */
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.fancy-button:hover:after {
+    top: -45%;
+    background-color: hsl(var(--primary)); /* Remplir avec la couleur primaire */
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+
+
+/* Cadre Stylisé pour l'Image (MIS À JOUR) */
+.image-frame {
+  /* Bordure interne pour le premier cadre */
+  border: 4px solid hsl(var(--primary) / 0.15); /* Une couleur primaire très légère */
+
+  /* Ajout d'une deuxième bordure via box-shadow */
+  /* La première ombre crée le cadre interne épais, la deuxième l'ombre portée */
+  box-shadow:
+    0 0 0 4px hsl(var(--primary) / 0.8), /* 4px de bordure "pleine" de votre couleur primaire */
+    0 8px 20px rgba(0, 0, 0, 0.25); /* Ombre principale pour donner de la profondeur */
+
+  border-radius: 1.5rem; /* Coins arrondis (24px) */
+  transition: all 0.3s ease-in-out;
+}
+
+.image-frame:hover {
+  /* Effet de survol plus subtil, peut-être une légère augmentation de l'ombre */
+  box-shadow:
+    0 0 0 4px hsl(var(--primary)), /* La bordure primaire devient opaque au survol */
+    0 12px 25px rgba(0, 0, 0, 0.35); /* Ombre légèrement plus grande et plus foncée */
+  transform: translateY(-3px); /* Effet de léger soulèvement */
+}
+
+
+/* Style pour le conteneur du filtre (similaire à Tailwind 'flex items-center relative') */
+.group {
+    display: flex;
+    line-height: 28px;
+    align-items: center;
+    position: relative;
+    max-width: 288px; /* Correspond à w-72 (288px) dans Tailwind */
+}
+
+/* Style pour le champ de saisie (similaire à Tailwind) */
+.input-search-styled {
+    width: 100%;
+    height: 40px;
+    line-height: 28px;
+    padding: 0 1rem;
+    padding-left: 2.5rem; /* Espace pour l'icône */
+    border: 2px solid transparent;
+    border-radius: 8px;
+    outline: none;
+    background-color: hsl(var(--secondary)); /* Utiliser secondary pour le fond léger */
+    color: hsl(var(--foreground)); /* Couleur du texte */
+    transition: 0.3s ease;
+}
+
+.input-search-styled::placeholder {
+    color: hsl(var(--muted-foreground)); /* Couleur du placeholder */
+}
+
+/* Effet au focus et au survol */
+.input-search-styled:focus, .input-search-styled:hover {
+    outline: none;
+    /* Utiliser votre couleur primaire pour le bord et l'ombre */
+    border-color: hsl(var(--primary) / 0.4);
+    background-color: hsl(var(--background)); /* Fond blanc/clair */
+    box-shadow: 0 0 0 4px hsl(var(--primary) / 0.1); /* Ombre de la couleur primaire */
+}
+
+/* Style pour l'icône de recherche */
+.icon-search-styled {
+    position: absolute;
+    left: 1rem;
+    fill: hsl(var(--muted-foreground)); /* Couleur gris/muette */
+    width: 1rem;
+    height: 1rem;
+    z-index: 10; /* Assurer que l'icône est au-dessus du champ */
+}
+
+
+/* --- CORRECTION DES STYLES POUR LA CARTE ANIMÉE CONTACT --- */
+
+.contact-card-animated {
+  box-shadow: 0px 8px 28px -9px rgba(0,0,0,0.45);
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  /* SUPPRESSION des styles de centrage fixe (display: flex, justify-content, align-items)
+     Ils sont gérés par les classes Tailwind dans Contact.jsx (flex flex-col justify-center) */
+}
+
+/* Vague (Animation et dimensionnement pour couvrir le conteneur) */
+.contact-card-animated .wave {
+  position: absolute;
+  width: 540px;
+  height: 700px;
+  opacity: 0.6;
+  left: 0;
+  top: 0;
+  margin-left: -50%;
+  margin-top: -70%;
+  /* Utilise la couleur primaire (Rouge) */
+  background: linear-gradient(744deg, hsl(var(--primary)), hsl(var(--primary) / 0.8) 60%, hsl(var(--primary) / 0.6));
+  z-index: 1;
+  border-radius: 40%;
+  animation: wave-rotate 55s infinite linear;
+}
+
+.contact-card-animated .wave:nth-child(2) { animation-duration: 50s; }
+.contact-card-animated .wave:nth-child(3) { animation-duration: 45s; }
+.contact-card-animated .wave:nth-child(2),
+.contact-card-animated .wave:nth-child(3) { top: 210px; }
+
+@keyframes wave-rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Conteneur de contenu (Doit se superposer aux vagues) */
+.contact-info-content {
+  position: relative;
+  z-index: 2; /* S'assurer qu'il est au-dessus des vagues */
+  width: 100%;
+  /* SUPPRESSION des styles de hauteur et largeur fixes (width: 240px; height: 330px;)
+     Le padding et l'alignement sont gérés par les classes Tailwind (p-6 md:p-10 text-center) dans Contact.jsx */
+}
+
+/* Style pour les icônes de contact */
+.contact-card-animated .contact-icon {
+  width: 3em;
+  height: 3em;
+  margin-bottom: 0.5em;
+  fill: currentColor;
+}
