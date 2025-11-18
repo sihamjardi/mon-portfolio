@@ -1,73 +1,91 @@
-# React + TypeScript + Vite
+# Portfolio - Siham Jardi
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
+Ce projet est un portfolio web moderne et interactif développé avec **React**, **TypeScript** et **Tailwind CSS**. Il présente le parcours professionnel, les projets réalisés et les compétences de Siham Jardi, développeuse Full Stack.
 
-Currently, two official plugins are available:
+Le portfolio est entièrement responsive et optimisé pour une expérience utilisateur fluide, incluant un mode sombre et des animations légères.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Objectifs Pédagogiques
+Ce travail pratique a été réalisé dans le cadre du Master *"Technologies Émergentes en Éducation"* à l'École Normale Supérieure de Marrakech et vise à :
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Maîtriser les technologies web modernes : React, TypeScript, Vite  
+- Appliquer les principes de design responsive et d'expérience utilisateur  
+- Implémenter un système de styling avancé avec Tailwind CSS  
+- Développer une architecture de projet structurée et maintenable  
+- Intégrer des composants réutilisables et des données dynamiques  
+- Mettre en œuvre les bonnes pratiques de développement web
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-```js
-export default defineConfig([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
+## Affichage des interfaces du portfolio
+Voici quelques captures d’écran :
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+<img width="911" height="505" alt="image" src="https://github.com/user-attachments/assets/5b2d6f5e-16dd-4e2a-95b9-04ad66b6ba30" />
+<img width="926" height="493" alt="image" src="https://github.com/user-attachments/assets/d181b9e5-e96b-4e0a-82a0-e105679549d0" />
+<img width="924" height="506" alt="image" src="https://github.com/user-attachments/assets/1ca1ca25-2e99-4983-985e-62a7a9034443" />
+<img width="912" height="505" alt="image" src="https://github.com/user-attachments/assets/786bdc05-2fea-4523-8763-394d902b5329" />
+<img width="909" height="503" alt="image" src="https://github.com/user-attachments/assets/6e0690b2-468c-4e4c-907a-412e6d895021" />
+<img width="900" height="493" alt="image" src="https://github.com/user-attachments/assets/715e3f9d-0572-446f-b43d-27d755915c14" />
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+---
+
+## Video demonstrative
+
+
+---
+
+## Déploiement
+Le portfolio est accessible en ligne à l’adresse suivante :  
+[https://portfolio-siham-snowy.vercel.app/](https://portfolio-siham-snowy.vercel.app/)
+
+---
+
+## Technologies Utilisées
+- **React** (avec JSX/TSX)  
+- **TypeScript** pour le typage statique  
+- **Vite** pour le bundling et le dev server rapide  
+- **Tailwind CSS** pour le design et les styles responsives  
+- **react-helmet-async** pour le SEO et la gestion des balises `<head>`  
+- **React Router** pour la navigation SPA  
+
+---
+
+## Fonctionnalités
+- Pages : Home, Projects, Experience, Education, Certifications, Contact  
+- Mode sombre avec toggle  
+- Données centralisées dans `src/data/` pour faciliter la maintenance  
+- Filtrage et tri dynamique des certifications et projets  
+- SEO minimal avec titres et descriptions uniques par page  
+- Déploiement sur Vercel avec build optimisé  
+
+---
+
+## Installation locale
+Pour lancer le projet localement :
+
+```bash
+git clone https://github.com/sihamjardi/mon-portfolio.git
+cd mon-portfolio
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from "eslint-plugin-react-x";
-import reactDom from "eslint-plugin-react-dom";
+**Le projet sera accessible sur :** http://localhost:5173
 
-export default defineConfig([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs["recommended-typescript"],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+Pour créer une version de production :
+
+```bash
+npm run build
+npm run preview
 ```
+
+---
+
+## License
+
+Ce projet est sous licence MIT.
