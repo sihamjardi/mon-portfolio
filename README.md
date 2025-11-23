@@ -36,7 +36,7 @@ Voici quelques captures d’écran :
 
 ## Video demonstrative
 
-[![Regarder la vidéo](https://img.youtube.com/vi/Z-rviEoWjE8/0.jpg)](https://youtu.be/Z-rviEoWjE8)
+[[![Regarder la vidéo](https://img.youtube.com/vi/Z-rviEoWjE8/0.jpg)](https://youtu.be/Z-rviEoWjE8)](https://youtu.be/Fr_A6yiZtUM)
 
 ---
 
