@@ -21,7 +21,7 @@ export default function CertificationsPage() {
   return (
     <>
       <Helmet>
-        <title>Certifications — MonPortfolio</title> {/* Correction du titre */}
+        <title>Certifications — MonPortfolio</title>
         <meta
           name="description"
           content="Certifications et badges obtenus par Siham JARDI"

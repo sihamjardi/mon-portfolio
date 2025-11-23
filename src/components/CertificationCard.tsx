@@ -79,9 +79,9 @@ export default function CertificationCard({ c }: { c: Certification }) {
             href={c.credentialUrl}
             target="_blank"
             rel="noreferrer"
-            aria-label={`Voir le certificat ${c.title}`}
+            aria-label={`Voir le certification ${c.title}`}
           >
-            Voir le certificat
+            Voir la vérification
           </a>
         )}
         {isExpired && <span className="text-amber-600">Expirée</span>}

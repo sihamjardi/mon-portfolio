@@ -132,12 +132,7 @@ export default function Contact() {
                           {contactInfo.phone1}
                         </a>
                       </li>
-                      <li className="flex items-start">
-                        <Phone className="w-6 h-6 mr-4 flex-shrink-0" />
-                        <a href={`tel:${contactInfo.phone1}`} className="hover:underline">
-                          {contactInfo.phone1}
-                        </a>
-                      </li>
+
                     </ul>
                   </div>
                 </div>
@@ -165,17 +160,17 @@ export default function Contact() {
                 <SocialIcon
                   Icon={Github}
                   href={socialLinks.github}
-                  label="Mon profil GitHub"
+                  label="GitHub"
                 />
                 <SocialIcon
                   Icon={Linkedin}
                   href={socialLinks.linkedin}
-                  label="Mon profil LinkedIn"
+                  label="LinkedIn"
                 />
                 <SocialIcon
                   Icon={Instagram}
                   href={socialLinks.instagram}
-                  label="Mon profil Instagram"
+                  label="Instagram"
                 />
               </div>
             </div>

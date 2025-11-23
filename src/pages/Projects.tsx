@@ -46,6 +46,11 @@ export default function Projects() {
                 </div>
 
                 <div className="flex gap-2">
+                  {p.video && (
+                    <a href={p.video} target="_blank" rel="noreferrer" className="card__button">
+                      Demo vidéo
+                    </a>
+                  )}
                   {p.link && (
                     <a href={p.link} target="_blank" rel="noreferrer" className="card__button">
                       Demo

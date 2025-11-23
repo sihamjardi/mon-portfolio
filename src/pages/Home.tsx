@@ -10,16 +10,9 @@ export default function Home() {
         <meta name="description" content="Portfolio" />
       </Helmet>
 
-      {/* CHANGEMENT CLÉ:
-        1. min-h-screen: Assure que le conteneur prend au moins toute la hauteur de la fenêtre.
-        2. flex flex-col justify-center: Active Flexbox et centre verticalement le contenu.
-        3. py-12 md:py-24: Ajoute un padding vertical pour éviter que le contenu ne soit 'trop proche' des bords (si le contenu n'occupe pas toute la hauteur).
-      */}
+
       <div className="max-w-7xl mx-auto px-4 md:px-6 min-h-screen flex flex-col justify-center py-12 md:py-24">
-        {/*
-          Le contenu de la section est centré à l'intérieur de ce div
-          grâce à justify-center sur le parent.
-        */}
+
         <section className="grid gap-6 md:grid-cols-2 md:gap-32 items-center">
           <div>
             <h1 className="text-4xl md:text-5xl font-bold text-primary">

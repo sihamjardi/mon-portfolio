@@ -10,7 +10,7 @@ export const profile = {
       href: "https://www.linkedin.com/in/siham-jardi-1035a6299/",
     },
   ],
-  about: "étudiant en master: Technologies émérgentes éducatives",
+  about: "étudiante en master: Technologies émérgentes éducatives",
   skills: [
     "Node.js",
     "Docker",

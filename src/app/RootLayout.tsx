@@ -8,7 +8,7 @@ export default function RootLayout() {
         <nav className="flex items-center justify-between py-4 px-4">
 
           <NavLink to="/" className="font-bold text-primary">
-            Siham JARDI
+            Portfolio
           </NavLink>
 
           <div className="flex items-center gap-6">
@@ -18,7 +18,6 @@ export default function RootLayout() {
                 to="/"
                 className={({ isActive }) =>
                   isActive
-                    // AJOUT : Soulignement bas (border-b-2) en couleur primaire
                     ? "font-semibold text-primary border-b-2 border-primary"
                     : "hover:text-primary transition"
                 }
@@ -31,7 +30,6 @@ export default function RootLayout() {
                 to="/projects"
                 className={({ isActive }) =>
                   isActive
-                    // AJOUT : Soulignement bas (border-b-2) en couleur primaire
                     ? "font-semibold text-primary border-b-2 border-primary"
                     : "hover:text-primary transition"
                 }
@@ -43,7 +41,6 @@ export default function RootLayout() {
                 to="/experience"
                 className={({ isActive }) =>
                     isActive
-                      // AJOUT : Soulignement bas (border-b-2) en couleur primaire
                       ? "font-semibold text-primary border-b-2 border-primary"
                       : "hover:text-primary transition"
                 }
@@ -55,7 +52,6 @@ export default function RootLayout() {
                 to="/education"
                 className={({ isActive }) =>
                   isActive
-                    // AJOUT : Soulignement bas (border-b-2) en couleur primaire
                     ? "font-semibold text-primary border-b-2 border-primary"
                     : "hover:text-primary transition"
                 }
@@ -67,7 +63,6 @@ export default function RootLayout() {
                 to="/certifications"
                 className={({ isActive }) =>
                   isActive
-                    // AJOUT : Soulignement bas (border-b-2) en couleur primaire
                     ? "font-semibold text-primary border-b-2 border-primary"
                     : "hover:text-primary transition"
                 }
@@ -79,7 +74,6 @@ export default function RootLayout() {
                 to="/contact"
                 className={({ isActive }) =>
                   isActive
-                    // AJOUT : Soulignement bas (border-b-2) en couleur primaire
                     ? "font-semibold text-primary border-b-2 border-primary"
                     : "hover:text-primary transition"
                 }
