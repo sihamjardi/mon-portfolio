@@ -23,12 +23,14 @@ Ce travail pratique a été réalisé dans le cadre du Master *"Technologies Ém
 ## Affichage des interfaces du portfolio
 Voici quelques captures d’écran :
 
-<img width="911" height="505" alt="image" src="https://github.com/user-attachments/assets/5b2d6f5e-16dd-4e2a-95b9-04ad66b6ba30" />
-<img width="926" height="493" alt="image" src="https://github.com/user-attachments/assets/d181b9e5-e96b-4e0a-82a0-e105679549d0" />
-<img width="924" height="506" alt="image" src="https://github.com/user-attachments/assets/1ca1ca25-2e99-4983-985e-62a7a9034443" />
-<img width="912" height="505" alt="image" src="https://github.com/user-attachments/assets/786bdc05-2fea-4523-8763-394d902b5329" />
-<img width="909" height="503" alt="image" src="https://github.com/user-attachments/assets/6e0690b2-468c-4e4c-907a-412e6d895021" />
-<img width="900" height="493" alt="image" src="https://github.com/user-attachments/assets/715e3f9d-0572-446f-b43d-27d755915c14" />
+<img width="910" height="498" alt="image" src="https://github.com/user-attachments/assets/b0b3e0d7-e232-4eb5-9e62-8349f15f0bad" />
+<img width="1807" height="1000" alt="image" src="https://github.com/user-attachments/assets/c2d907e3-4da7-4aeb-9ae2-e4a71f317e05" />
+<img width="1811" height="1001" alt="image" src="https://github.com/user-attachments/assets/081752f3-cb7c-4fb7-8ffb-2b87de69143f" />
+<img width="923" height="487" alt="image" src="https://github.com/user-attachments/assets/04804d72-7017-4799-9f10-7c42bfb1af1d" />
+<img width="922" height="498" alt="image" src="https://github.com/user-attachments/assets/17ca3b6b-942f-45c8-8c5b-cdb8c4921b50" />
+<img width="912" height="500" alt="image" src="https://github.com/user-attachments/assets/cf88d325-44ed-4316-b1d5-6c2fb4121696" />
+<img width="905" height="492" alt="image" src="https://github.com/user-attachments/assets/087313c1-d296-4ac9-a311-17133d8b5ce3" />
+<img width="911" height="493" alt="image" src="https://github.com/user-attachments/assets/dc217502-ee41-411b-b064-3cda677a5a62" />
 
 ---
 
@@ -40,7 +42,7 @@ Voici quelques captures d’écran :
 
 ## Déploiement
 Le portfolio est accessible en ligne à l’adresse suivante :  
-[https://portfolio-siham-snowy.vercel.app/](https://portfolio-siham-snowy.vercel.app/)
+https://mon-portfolio-omega-seven.vercel.app/
 
 ---
 
